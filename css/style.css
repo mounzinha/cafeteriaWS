@@ -1,0 +1,260 @@
+/* ===============================
+   CoBee - Estilo Global
+   Paleta: Marrom Claro, Preto, Branco
+================================ */
+:root {
+  --marrom-claro: #d7b899;
+  --marrom-escuro: #3b2c25;
+  --preto: #111;
+  --branco: #fff;
+  --cinza: #f7f5f2fe;
+  --transp: rgba(0, 0, 0, 0.6);
+  --font1: "Poppins", sans-serif;
+  --font2: "Playfair Display", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font1);
+  background-color: var(--branco);
+  line-height: 1.6;
+}
+
+/* ===== HEADER / NAVBAR ===== */
+header {
+  width: 100%;
+  background: var(--marrom-escuro);
+  color: var(--branco);
+  padding: 1rem 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  .logo1 {
+    height: 70px;
+    width: 70px;
+    margin-right: 10px;
+  }
+}
+
+header .logo {
+  font-family: var(--font2);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--branco);
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--branco);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--marrom-claro);
+}
+
+/* ===== HERO HOME ===== */
+.hero {
+  height: 100vh;
+  background: url("../imagem/imgCafeLivro.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: var(--branco);
+  background-attachment: fixed;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-family: var(--font2);
+}
+
+.hero p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: var(--branco);
+}
+
+.btn {
+  background: var(--marrom-claro);
+  color: var(--preto);
+  padding: 0.8rem 1.5rem;
+  margin: 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--branco);
+}
+
+/* ===== SEÇÕES COMUNS ===== */
+section {
+  padding: 5% 8%;
+}
+
+section h2 {
+  font-family: var(--font1);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: rgb(142, 80, 18);
+  font-weight: bold;
+}
+
+/* ===== SOBRE ===== */
+.sobre-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.sobre-content img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== MENU ===== */
+.menu-search {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.menu-search input {
+  width: 60%;
+  padding: 0.7rem;
+  border: 1px solid var(--marrom-escuro);
+  border-radius: 30px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: var(--cinza);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin: 0.8rem 0;
+  color: var(--marrom-escuro);
+}
+
+.card p {
+  margin-bottom: 1rem;
+}
+
+.card button {
+  background: var(--marrom-escuro);
+  color: var(--branco);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background: var(--marrom-claro);
+  color: var(--preto);
+}
+
+/* ===== CARRINHO ===== */
+#cart {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100%;
+  background: var(--branco);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.4s;
+  padding: 1rem;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+#cart.active {
+  right: 0;
+}
+
+#cart h3 {
+  margin-bottom: 1rem;
+  color: var(--marrom-escuro);
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.cart-item span {
+  cursor: pointer;
+  color: red;
+}
+
+/* ===== CONTATO ===== */
+.contato-grid {
+  display: grid;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.contato-grid a img {
+  width: 40px;
+  transition: transform 0.3s;
+}
+
+.contato-grid a img:hover {
+  transform: scale(1.1);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--marrom-escuro);
+  color: var(--branco);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
