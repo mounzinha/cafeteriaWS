@@ -27,13 +27,13 @@ body {
 
 /* ===== HEADER / NAVBAR ===== */
 header {
-  width: 100%;
+  /* width: 100%; */
   background: var(--marrom-escuro);
   color: var(--branco);
-  padding: 1rem 5%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 20px 50px;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: flex-end; */
   position: sticky;
   top: 0;
   z-index: 999;
@@ -41,6 +41,9 @@ header {
     height: 70px;
     width: 70px;
     margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -49,13 +52,25 @@ header .logo {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--branco);
+  display: flex;
   text-decoration: none;
+}
+
+.logo-container {
+  width: 50px;
+  display: flex;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
 nav ul li a {
@@ -110,25 +125,50 @@ nav ul li a:hover {
 }
 
 /* ===== SEÇÕES COMUNS ===== */
-section {
+.menu-section {
   padding: 5% 8%;
 }
 
-section h2 {
+.menu-section h2 {
   font-family: var(--font1);
   font-size: 2rem;
   margin-bottom: 2rem;
   text-align: center;
   color: rgb(142, 80, 18);
   font-weight: bold;
+  display: flex;
+  justify-content: center;
 }
 
 /* ===== SOBRE ===== */
-.sobre-content {
-  display: grid;
+.contact {
+  /* display: flex; */
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: center;
+  margin: 6rem;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 1rem;
+}
+
+h2 {
+  font-family: var(--font1);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--marrom-escuro);
 }
 
 .sobre-content img {
@@ -138,29 +178,32 @@ section h2 {
 }
 
 /* ===== MENU ===== */
-.menu-search {
-  text-align: center;
+
+.search {
+  text-align: left;
   margin-bottom: 2rem;
 }
 
-.menu-search input {
-  width: 60%;
-  padding: 0.7rem;
+.search {
+  width: 20%;
+  padding: 0.3rem;
   border: 1px solid var(--marrom-escuro);
-  border-radius: 30px;
+  border-radius: 15px;
 }
 
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.menu {
+  /* display: flex; */
+  align-items: center;
+  /* justify-content: space-between; */
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
   gap: 2rem;
 }
 
 .card {
   background: var(--cinza);
   border-radius: 12px;
-  padding: 1rem;
-  text-align: center;
+  /* padding: 1rem; */
+  /* text-align: center; */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
@@ -183,7 +226,7 @@ section h2 {
   margin-bottom: 1rem;
 }
 
-.card button {
+.button {
   background: var(--marrom-escuro);
   color: var(--branco);
   padding: 0.5rem 1rem;
@@ -193,7 +236,7 @@ section h2 {
   transition: 0.3s;
 }
 
-.card button:hover {
+.button:hover {
   background: var(--marrom-claro);
   color: var(--preto);
 }
@@ -202,15 +245,15 @@ section h2 {
 #cart {
   position: fixed;
   top: 0;
-  right: -100%;
-  width: 300px;
-  height: 100%;
+  /* right: -100%;
+  width: 300px; */
+  /* height: 100%;
   background: var(--branco);
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
   transition: right 0.4s;
   padding: 1rem;
   overflow-y: auto;
-  z-index: 1000;
+  z-index: 1000; */
 }
 
 #cart.active {
@@ -236,7 +279,11 @@ section h2 {
 
 /* ===== CONTATO ===== */
 .contato-grid {
-  display: grid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+  padding: 100px;
   gap: 1.5rem;
   text-align: center;
 }

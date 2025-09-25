@@ -16,7 +16,10 @@
   <body>
     <header>
       <nav class="navbar">
-        <h1 class="logo">CoBee</h1>
+        <div class="logo-container">
+          <img src="imagem/pote-de-cafe.png" alt="" class="logo1" />
+          <h1 class="logo">CoBee</h1>
+        </div>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="sobre.html">Sobre</a></li>
@@ -29,30 +32,46 @@
 
     <section class="menu-section">
       <h2>Nosso Cardápio</h2>
-      <input type="text" id="search" placeholder="Buscar item..." />
+      <input type="text" class="search" placeholder="🔍 Buscar item..." />
+      <div class="menu">
+        <div id="menu-items" class="menu-items">
 
-      <div id="menu-items" class="menu-items">
-        <div class="item" data-name="Café Expresso" data-price="6">
-          <h3>Café Expresso</h3>
-          <p>R$ 6,00</p>
-          <button onclick="addToCart('Café Expresso', 6)">Adicionar</button>
-        </div>
-        <div class="item" data-name="Croissant" data-price="8">
-          <h3>Croissant</h3>
-          <p>R$ 8,00</p>
-          <button onclick="addToCart('Croissant', 8)">Adicionar</button>
-        </div>
-        <div class="item" data-name="Livro Romance" data-price="45">
-          <h3>Livro Romance</h3>
-          <p>R$ 45,00</p>
-          <button onclick="addToCart('Livro Romance', 45)">Adicionar</button>
-          <button onclick="removeFromCart('Livro Romance', 45)">Remover</button>
+          <div class="item" data-name="Café Expresso" data-price="6">
+            <img src="" alt="">
+            <h3>Café Expresso</h3>
+            <p>R$ 6,00</p>
+            <button onclick="addToCart" class="button"('Café Expresso', 6)">Adicionar</button>
+          </div>
+
+          <div  class="menu-items" data-name="Croissant" data-price="8">
+            <img src="" alt="">
+            <h3>Croissant</h3>
+            <p>R$ 8,00</p>
+            <button class="button" onclick="addToCart('Croissant', 8)">Adicionar</button>
+          </div>
+
+          <div class="menu-items" data-name="Livro Romance" data-price="45">
+            <img src="" alt="">
+            <h3>Livro Romance</h3>
+            <p>R$ 45,00</p>
+            <button class="button" onclick="addToCart('Livro Romance', 45)">Adicionar</button>
+          </div>
+          <div class="menu-items" data-name="Café com Leite" data-price="10">
+            <img src="" alt="">
+            <h3>Café com Leite</h3>
+            <p>R$ 10,00</p>
+            <button class="button" onclick="addToCart('Café com Leite', 10)">Adicionar</button>
+          <div class="menu-items" data-name="Livro Comedia" data-price="45">
+            <img src="" alt="">
+            <h3>Livro Romance</h3>
+            <p>R$ 45,00</p>
+            <button class="button" onclick="addToCart('Livro Romance', 45)">Adicionar</button>
+          </div>
         </div>
       </div>
-
       <h2>Carrinho</h2>
-      <ul id="cart"></ul>
-      <p>Total: R$ <span id="total">0</span></p>
+      <ul id="cart-list"></ul>
+      <div>Total: <span id="total"></span></div>
     </section>
   </body>
 </html>

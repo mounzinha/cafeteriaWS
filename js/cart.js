@@ -12,7 +12,7 @@ const formatarPreco = (valor) =>
 
 // Atualiza a exibição do carrinho
 function updateCart() {
-  const cartList = document.getElementById("cart");
+  const cartList = document.getElementById("cart-list");
   const totalElement = document.getElementById("total");
   if (!cartList || !totalElement) return;
 
@@ -23,7 +23,7 @@ function updateCart() {
   } else {
     cart.forEach((item, index) => {
       let li = document.createElement("li");
-      li.textContent = `${item.name} - ${formatarPreco(item.price)}`;
+      li.textContent = `${item.name} - ${formatarPreco(item.price)} `;
       let btn = document.createElement("button");
       btn.textContent = "X";
       btn.setAttribute("aria-label", `Remover ${item.name} do carrinho`);
@@ -33,6 +33,7 @@ function updateCart() {
     });
   }
 
+  total = cart.reduce((sum, item) => sum + item.price, 0);
   totalElement.textContent = formatarPreco(total);
   localStorage.setItem("cart", JSON.stringify(cart));
 }
