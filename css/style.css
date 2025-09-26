@@ -126,7 +126,8 @@ nav ul li a:hover {
 
 /* ===== SEÇÕES COMUNS ===== */
 .menu-section {
-  padding: 5% 8%;
+  padding: 10% 8%;
+  gap: 30px;
 }
 
 .menu-section h2 {
@@ -138,6 +139,7 @@ nav ul li a:hover {
   font-weight: bold;
   display: flex;
   justify-content: center;
+  gap: 30px;
 }
 
 /* ===== SOBRE ===== */
@@ -295,6 +297,16 @@ h2 {
 
 .contato-grid a img:hover {
   transform: scale(1.1);
+}
+
+.checkout {
+  color: var(--branco);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 1rem;
 }
 
 /* ===== FOOTER ===== */
