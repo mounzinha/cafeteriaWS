@@ -23,6 +23,7 @@ body {
   font-family: var(--font1);
   background-color: var(--branco);
   line-height: 1.6;
+  /* text-decoration: none; */
 }
 
 /* ===== HEADER / NAVBAR ===== */
@@ -164,6 +165,7 @@ img {
   justify-content: center;
   gap: 3rem;
   margin-top: 1rem;
+  text-decoration: none;
 }
 
 h2 {
@@ -171,6 +173,15 @@ h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: var(--marrom-escuro);
+}
+
+.content {
+  font-family: var(--font1);
+  font-size: 1.1rem;
+  color: var(--preto);
+  margin-bottom: 1rem;
+  text-align: justify;
+  margin: 100px;
 }
 
 .sobre-content img {
