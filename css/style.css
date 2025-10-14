@@ -20,6 +20,7 @@
 }
 
 body {
+   background-color: #c4a85b;
   font-family: var(--font1);
   background-color: var(--branco);
   line-height: 1.6;
